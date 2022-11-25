@@ -6,7 +6,7 @@ from converter import name_to_dec
 
 programa = "dor_e_sofrimento"
 programa = open(programa, 'r').read().split("\n")
-saida = open("mul_ori", "w")
+saida = open("nada", "w")
 for linha in programa:
   linha = limpar(linha)
   if linha != []:
