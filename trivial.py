@@ -8,6 +8,8 @@ from converter import name_to_dec
 
 # programa construído com ajuda dos alunos de TADS 2022.1
 
+linhas = [] # lista para tratar beq bne e j no futuro (tavez usar dicionário)
+
 programa = "dor_e_sofrimento" # caminho do arquivo a ser lido
 # abre arquivo e cria uma lista separando itens pela quebra de linha
 programa = open(programa, 'r').read().split("\n") # xerocado de @maure-tads
@@ -20,7 +22,10 @@ for linha in programa: # rotina para cada linha do arquivo lido
     if "inválida" in instrucao: # encerra o programa caso instrução seja inválida
       print(instrucao)
       exit(0)
-    instrucao = montar(instrucao, linha) # monta binario de 32 bits conforme instrução
+
+    # como lhe dar com beq, bne e j?
+      
+    instrucao = montar(instrucao, linha, linhas) # monta binario de 32 bits conforme instrução
     instrucao = bin_to_hex(instrucao) # converte binário de 32 bits para hex 8 bits
     saida.write(instrucao+"\n") # escreve instrução em hexadecimal em cada linha
 saida.close() #fecha arquivo de saída

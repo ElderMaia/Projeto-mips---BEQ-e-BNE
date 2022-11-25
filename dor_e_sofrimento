@@ -33,4 +33,7 @@ fase2:  nop # tabulacao horizontal
   syscall
   xor $24 $25 $26
   xori $27 $28 123
-  end: 
+beq $29 $30 main
+bne $31 $0 end
+end:
+j fase1

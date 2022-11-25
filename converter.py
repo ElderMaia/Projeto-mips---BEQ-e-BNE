@@ -3,10 +3,10 @@ from padroes import registadores # importa a função registradores de padroes.p
 def bin_to_hex(instrucao): # string que representa numero de 32 bits em binário 
   return format(int(instrucao, 2), "08x") # string de represneta nume hex de 8 bits  
 
-def dec_to_bin(numero): # inteiro 
+def dec_to_bin(numero, bits): # inteiro 
   binario = ""
-  for i in range(16):
-    binario += str(numero >> 15-i & 1) 
+  for i in range(bits):
+    binario += str(numero >> (bits - 1) - i & 1) 
   return binario # retorna string que representa binário de 16 bits em complento de 2
 
 def name_to_dec(linha): # lista com instrução mips limpa

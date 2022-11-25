@@ -114,6 +114,18 @@ def padroes(nome): # nome é string do nome da instrução
       "instrucao": "001110"+"sti", # instrução $s $t imediato (16 bits)
       "padrao": "i"
     },
+    "beq": {
+      "instrucao": "000100"+"sti", # instrução $s $t imediato (16 bits)
+      "padrao": "i"
+    },
+    "bne": {
+      "instrucao": "000101"+"sti", # instrução $s $t imediato (16 bits)
+      "padrao": "i"
+    },
+    "j": {
+      "instrucao": "000010"+"j", # instrução instr_index (26 bits)
+      "padrao": "j"
+    },
   }
   if nome in instrucoes: # Se houver o a instrução cadastrada 
     return instrucoes[nome] # o programa retorna o dicionário com a instrução
