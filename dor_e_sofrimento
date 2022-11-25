@@ -1,10 +1,36 @@
-.text
-add $1 $0 $5 # asdasd add
-end: addi $v0 $t0 10
-#syscall
-main:
-add $6 $7 $8
-add $8, $0, $4 # entrada
-#r  Rd Rs Rt
-addi $5 $1 -123
-#i   Rs Rt im
+.text # instrucao de indicador de endeco de memoria
+main: # rotulo sozinho
+# comentario sozinho
+# quebra de linha 1
+
+# quebra de linha 2
+
+# daqui pra baixo se encontram as 27 instruções da fase 1
+fase:1 add $0 $1 $2 # linha com rotulo
+addi $3 $4 -123 # numero negativo
+addiu $5 $6 -456 # numero negativo
+addu $7, $8, $9 # virgula
+and $10 $11 $12
+andi $13 $14 789
+div $15 $16
+divu $17 $18
+mul $19 $20 $21
+mult $22 $23
+multu $24 $25
+fase2:  nop # tabulacao horizontal
+  nor $26 $27 $28
+  or $29 $30 $31
+  ori $0 $1 123
+  sll $2 $3 31
+  slt $4 $5 $6
+  slti $7 $8 -456 # numero negativo
+  sltiu $9 $10 -789 # numero negativo
+  sltu $11 $12 $13
+  sra $14 $15 31
+  srl $16 $17 31
+  sub $18 $19 $20
+  subu $21 $22 $23
+  syscall
+  xor $24 $25 $26
+  xori $27 $28 123
+end: 
