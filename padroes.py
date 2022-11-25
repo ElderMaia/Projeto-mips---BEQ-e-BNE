@@ -2,7 +2,8 @@
 # padrão r exemplo: add $d $s $t
 # padrão s exemplo: sll $d $t a (5 bits)
 # padrão d exemplo: div $s $t 
-# padrões podem ser adicionados ou modificados (modificar também montar.py)
+# padrões podem ser adicionados ou modificados (modificar também montar.py)]
+
 def padroes(nome): # nome é string do nome da instrução
   instrucoes = { # dicionário de dicionários. Ideia xerocada do @pedro-maure
     "add": {
