@@ -6,7 +6,7 @@ Este projeto faz parte da disciplina de arquitetura de computadores. Esta é a p
 
 Este projeto tem como objetivo simular um montador (asembler) no padrão mips. Lendo um arquivo de texto com instruções mips criando um arquivo de saída com valores hexadecimais correspondentes do padrão.
 
-Para ver este projeto em funcionamento faça o seguinte: Clone este repositório; Encontre o arquivo trivial.py; Execute no terminal pyhton trivial.py
+Para ver este projeto em funcionamento faça o seguinte: Clone este repositório; Encontre o arquivo trivial.py; Execute no terminal pyhton trivial.py; Ou somente execute main.py e abrace um pote de sorverte... Seja feliz.
 
 Caso queira traduzir um arquivo com instruções diferentes das originais, copie e cole as novas instruções para dentro do arquivo dor_e_sofrimento
 
