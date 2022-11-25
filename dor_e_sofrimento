@@ -1,0 +1,10 @@
+.text
+add $1 $0 $5 # asdasd add
+end: addi $v0 $t0 10
+#syscall
+main:
+add $6 $7 $8
+add $8, $0, $4 # entrada
+#r  Rd Rs Rt
+addi $5 $1 -123
+#i   Rs Rt im
