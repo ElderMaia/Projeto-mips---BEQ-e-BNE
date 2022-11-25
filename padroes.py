@@ -5,7 +5,7 @@
 # padrões podem ser adicionados ou modificados (modificar também montar.py)]
 
 def padroes(nome): # nome é string do nome da instrução
-  instrucoes = { # dicionário de dicionários. Ideia xerocada do @pedro-maure
+  instrucoes = { # dicionário de dicionários. Ideia xerocada do @maure-tads
     "add": {
       "instrucao": "000000"+"std"+"00000"+"100000", # instrução $d $s $t
       "padrao": "r"
@@ -121,7 +121,7 @@ def padroes(nome): # nome é string do nome da instrução
     return f"instrução {nome} inválida" # caso contrário retorna um erro
 
 def registadores(registrador): # registrador é string
-  registradores = { # dicionário de dicionários xerocado de @pedro-maue
+  registradores = { # dicionário de dicionários xerocado de @maure-tads
     "zero": 0,
     "at": 1,
     "v0": 2,

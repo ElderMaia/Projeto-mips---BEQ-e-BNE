@@ -11,3 +11,5 @@ Para ver este projeto em funcionamento faça o seguinte: Clone este repositório
 Caso queira traduzir um arquivo com instruções diferentes das originais, copie e cole as novas instruções para dentro do arquivo dor_e_sofrimento
 
 A saída do programa estará dentro do nada
+
+agradecimento especial a @maure-tads de quem copiei descaradamente algumas ideias :)

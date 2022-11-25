@@ -10,7 +10,7 @@ from converter import name_to_dec
 
 programa = "dor_e_sofrimento" # caminho do arquivo a ser lido
 # abre arquivo e cria uma lista separando itens pela quebra de linha
-programa = open(programa, 'r').read().split("\n") # xerocado de @pedro-maure
+programa = open(programa, 'r').read().split("\n") # xerocado de @maure-tads
 saida = open("nada", "w") # aquivo a ser escrito pelo programa
 for linha in programa: # rotina para cada linha do arquivo lido
   linha = limpar(linha) # limpa-se a linha
