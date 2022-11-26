@@ -12,6 +12,6 @@ Caso queira traduzir um arquivo com instruções diferentes das originais, copie
 
 A saída do programa estará dentro do nada
 
-Este projeto necessita de melhorias como a implementação das instruções beq, bne e j
+Este projeto necessita de melhorias como a implementação das instruções beq, bne e j, bem como imediatos do tipo ascii e pseudo-instruções do MARS
 
 Agradecimento especial a @maure-tads de quem copiei descaradamente algumas ideias :)

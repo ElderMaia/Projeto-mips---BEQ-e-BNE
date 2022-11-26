@@ -6,7 +6,7 @@ def limpar(linha): # recebe string
     linha = linha[:comentario] + " " # remove comentários
   if linha.count(":") > 0: 
     rotulo = linha.index(":")
-    linha = linha[rotulo + 1:] + " " # remove rótulos
+    linha = linha[rotulo + 1:] + " " # remove rótulos (transformar em função)
   linha = linha.replace(",", " ") # remove vígulas
   linha = linha.replace("$", " ") # remove sifrões
   linha = linha.replace("  ", " ") # remove tabulação horizontal

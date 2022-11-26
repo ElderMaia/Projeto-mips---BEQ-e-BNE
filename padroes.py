@@ -123,7 +123,7 @@ def padroes(nome): # nome é string do nome da instrução
       "padrao": "i"
     },
     "j": {
-      "instrucao": "000010"+"j", # instrução instr_index (26 bits)
+      "instrucao": "000010"+"j", # instrução instr_index (26 bits) >> 2 bits à direita
       "padrao": "j"
     },
   }
