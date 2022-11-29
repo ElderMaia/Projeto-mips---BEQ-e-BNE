@@ -1,14 +1,13 @@
 from limpar import limpa_dois_pontos
 
 def indexar(linhas): # recebe lista de linhas do programa
-  apagar_vazio(linhas) 
   listar(linhas) 
+  apagar_vazio(linhas) 
   unir_rotulo(linhas)
   rotular(linhas)
-  return linhas # retorna linhas rotuladas e indexadas
-
   for i in range(len(linhas)): # indexa linhas do programa
-    linhas[i] = [linhas[i][0]] + [linhas[i][1:]] + [i]
+    linhas[i] = [linhas[i][0]] + [linhas[i][1:]] + [i]  
+  return linhas # retorna linhas rotuladas e indexadas
   
 def listar(linhas): # lista linhas quebrando por separador
   for i in range(len(linhas)):

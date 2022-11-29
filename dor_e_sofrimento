@@ -1,5 +1,5 @@
 .text # instrucao de indicador de endeco de memoria
-main: # rotulo sozinho
+# main: # rotulo sozinho
 # comentario sozinho
 # quebra de linha 1
 
@@ -7,7 +7,7 @@ main: # rotulo sozinho
 
 # daqui pra baixo se encontram as 27 instruções da fase 1
 fase1: add $0 $1 $2 # linha com rotulo
-addi $3 $4 -123 # numero negativo
+main: addi $3 $4 -123 # numero negativo
 addiu $5 $6 -456 # numero negativo
 addu $7, $8, $9 # virgula
 and $10, $11, $12

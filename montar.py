@@ -9,7 +9,7 @@ def montar(instrucao, linha, linhas): # dicionário com padrão e lista com inst
   if padrao == "i": # montagem do padrão I
     s = int(linha[2]) # $s
     t = int(linha[1]) # $t
-    if linhas.conunt(linha[3]) > 0: # para caso de beq e bne
+    if linhas[0].count(linha[3]) > 0: # para caso de beq e bne
       i = linhas.index(linha[3]) - 1 - linhas[-1]
     else:
       i = int(linha[3]) # imediato 
