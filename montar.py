@@ -9,7 +9,10 @@ def montar(instrucao, linha, linhas): # dicionário com padrão e lista com inst
   if padrao == "i": # montagem do padrão I
     s = int(linha[2]) # $s
     t = int(linha[1]) # $t
-    i = int(linha[3]) # imediato tratar beq e bne
+    if linhas.conunt(linha[3]) > 0: # para caso de beq e bne
+      i = linhas.index(linha[3]) - 1 - linhas[-1]
+    else:
+      i = int(linha[3]) # imediato 
     instrucao = instrucao.replace("s", format(s, "05b")) # substitui 's' por 5 bits
     instrucao = instrucao.replace("t", format(t, "05b")) # substitui 't' por 5 bits
     instrucao = instrucao.replace("i", dec_to_bin(i, 16)) # substitui 'i' por 16 bits
@@ -37,7 +40,7 @@ def montar(instrucao, linha, linhas): # dicionário com padrão e lista com inst
     instrucao = instrucao.replace("a", format(a, "05b")) # substitui 's' por 5 bits
 
   elif padrao == "j": # montagem do padrão j 
-    j = int(0x00400000 + linhas.index(linha[1]) * 4) >> 2 # instr_index deslocada 2 bits à direita
+    j = int((0x00400000 + linhas.index(linha[1] * 4)) >> 2) # instr_index deslocada 2 bits à direita
     instrucao = instrucao.replace("j", dec_to_bin(j, 26)) # substitui 'j' por 26 bits
     
   return instrucao # string representa binário de 32 bits
