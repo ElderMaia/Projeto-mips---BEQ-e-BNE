@@ -1,8 +1,10 @@
-# padrão i exemplo: addi $s $t imediato (16 bits)
+# padrão i exemplo: addi $s $t imediato (numero em complemento de 2 em 16 bits)
 # padrão r exemplo: add $d $s $t
-# padrão s exemplo: sll $d $t a (5 bits)
+# padrão s exemplo: sll $d $t a (numero em 5 bits)
 # padrão d exemplo: div $s $t 
-# padrões podem ser adicionados ou modificados (modificar também montar.py)]
+# padrão b exemplo: beq $s $t b (instrução[indice] - roluto[indice] - 1 em 16 bits) 
+# padrão j exemplo: div $s $t j (0x00400000 + indice * 4 >> 2 em 26 bits)
+# padrões podem ser adicionados ou modificados (modificar também montar.py)
 
 def padroes(nome): # nome é string do nome da instrução
   instrucoes = { # dicionário de dicionários. Ideia xerocada do @maure-tads
