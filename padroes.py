@@ -115,12 +115,12 @@ def padroes(nome): # nome é string do nome da instrução
       "padrao": "i"
     },
     "beq": {
-      "instrucao": "000100"+"sti", # instrução $s $t imediato (16 bits)
-      "padrao": "i"
+      "instrucao": "000100"+"stb", # instrução $s $t b (16 bits)
+      "padrao": "b"
     },
     "bne": {
-      "instrucao": "000101"+"sti", # instrução $s $t imediato (16 bits)
-      "padrao": "i"
+      "instrucao": "000101"+"stb", # instrução $s $t b (16 bits)
+      "padrao": "b"
     },
     "j": {
       "instrucao": "000010"+"j", # instrução instr_index (26 bits) >> 2 bits à direita

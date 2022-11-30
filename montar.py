@@ -13,18 +13,20 @@ def montar(instrucao, linha, linhas): # dicionário com padrão e lista com inst
   if padrao == "i": # montagem do padrão I
     s = int(linha[2]) # $s
     t = int(linha[1]) # $t
-    if linha[0] == "beq" or linha[0] == "bne":
-      s = int(linha[1]) # $s
-      t = int(linha[2]) # $t
-      index_rotulo = get_index(linhas, linha[3])
-      i = index_rotulo - mips[-1] - 1 # para caso de beq e bne
-    else:
-      i = int(linha[3]) # imediato 
+    i = int(linha[3]) # imediato 
     instrucao = instrucao.replace("s", format(s, "05b")) # substitui 's' por 5 bits
     instrucao = instrucao.replace("t", format(t, "05b")) # substitui 't' por 5 bits
     instrucao = instrucao.replace("i", dec_to_bin(i, 16)) # substitui 'i' por 16 bits
-    print(instrucao)
-    
+
+  elif padrao == "b":
+    s = int(linha[1]) # $s
+    t = int(linha[2]) # $t
+    index_rotulo = get_index(linhas, linha[3]) # indice do rotulo 
+    b = index_rotulo - mips[-1] - 1 # calculo da distancia entre instruções
+    instrucao = instrucao.replace("s", format(s, "05b")) # substitui 's' por 5 bits
+    instrucao = instrucao.replace("t", format(t, "05b")) # substitui 't' por 5 bits
+    instrucao = instrucao.replace("b", dec_to_bin(b, 16)) # substitui 'i' por 16 bits
+  
   elif padrao == "r": # montagem do padrão R
     s = int(linha[2]) # $s
     t = int(linha[3]) # $t
