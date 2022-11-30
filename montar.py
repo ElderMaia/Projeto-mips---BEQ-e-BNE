@@ -1,5 +1,5 @@
 from converter import dec_to_bin # importa função de converter decimal para binário
-from indexar import pega_indice
+from indexar import pega_indice # importa função que retorna indice de rótulo
 
 def montar(instrucao, linha, linhas): # dicionário com padrão e lista com instrução mips
   padrao = instrucao["padrao"]
