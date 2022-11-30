@@ -4,7 +4,7 @@
 Esta é a primeira etapa do projeto da disciplina de arquitetura de computadores.
 
 ## Qual é o objetivo?
-Cujo objetivo simular um montador (asembler) no padrão mips. Lendo um arquivo de texto com instruções mips criando um arquivo de saída com valores hexadecimais correspondentes do padrão.
+Simular um montador (asembler) no padrão mips. Lendo um arquivo de texto com instruções mips criando um arquivo de saída com valores hexadecimais correspondentes do padrão.
 
 ## Como executar?
 Para ver este projeto em funcionamento faça o seguinte: Clone este repositório; Execute o arquivo **main.py**.
@@ -19,4 +19,4 @@ Caso queira traduzir um arquivo com instruções diferentes das originais, copie
 Este projeto necessita de melhorias como a implementação de imediatos do tipo ascii e pseudo-instruções do MARS
 
 ## Agradecimentos
-Agradecimento especial a @maure-tads de quem copiei descaradamente algumas ideias e Hiulquias que me deu dicas importantes para as próximas etapas do projeto :)
+Agradecimento especial a @maure-tads de quem copiei descaradamente algumas ideias e Hilquias que me deu dicas importantes para as próximas etapas do projeto :)
