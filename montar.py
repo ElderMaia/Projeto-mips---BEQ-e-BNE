@@ -1,5 +1,5 @@
 from converter import dec_to_bin # importa função de converter decimal para binário
-from get_index import get_index
+from indexar import pega_indice
 
 def montar(instrucao, linha, linhas): # dicionário com padrão e lista com instrução mips
   padrao = instrucao["padrao"]
@@ -21,7 +21,7 @@ def montar(instrucao, linha, linhas): # dicionário com padrão e lista com inst
   elif padrao == "b":
     s = int(linha[1]) # $s
     t = int(linha[2]) # $t
-    index_rotulo = get_index(linhas, linha[3]) # indice do rotulo 
+    index_rotulo = pega_indice(linhas, linha[3]) # indice do rotulo 
     b = index_rotulo - mips[-1] - 1 # calculo da distancia entre instruções
     instrucao = instrucao.replace("s", format(s, "05b")) # substitui 's' por 5 bits
     instrucao = instrucao.replace("t", format(t, "05b")) # substitui 't' por 5 bits
@@ -50,7 +50,7 @@ def montar(instrucao, linha, linhas): # dicionário com padrão e lista com inst
     instrucao = instrucao.replace("a", format(a, "05b")) # substitui 's' por 5 bits
 
   elif padrao == "j": # montagem do padrão j 
-    j = 0x00400000 + get_index(linhas, linha[1]) * 4 >> 2 # instr_index deslocada 2 bits à direita
+    j = 0x00400000 + pega_indice(linhas, linha[1]) * 4 >> 2 # instr_index deslocada 2 bits à direita
     instrucao = instrucao.replace("j", dec_to_bin(j, 26)) # substitui 'j' por 26 bits
     
   return instrucao # string representa binário de 32 bits
